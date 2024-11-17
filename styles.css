@@ -1,0 +1,143 @@
+:root{
+    --white:#FFF;
+    --cream:#F3E5D7;
+    --lead:#E3DDD7;
+    --brown:#5F564E;
+    --black:#302D2B;
+
+    --redbrowm:#854532;
+
+    --pink:#7b274e;
+
+    --whitepink:#FFF4F9;
+
+}
+  
+body {
+    font-family: 'Outfit';
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.recipe-card {
+    background: var(--white);
+    max-width: 650px;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    color: var(--black);
+    font-size: 28px;
+    margin-bottom: 16px;
+    font-family: 'Young Serif';
+    font-weight: 400;
+}
+
+.description {
+    color: var(--brown);
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+.prepare-time-title{
+    color: var(--pink);
+}
+.prep-time {
+    background-color: var(--whitepink);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+h2 {
+    color: var(--redbrowm);
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    color: #5f6368;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+li::before {
+    color: #854632;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.instructions {
+    counter-reset: step-counter;
+}
+
+.instructions li {
+    counter-increment: step-counter;
+    margin-bottom: 16px;
+    padding-left: 36px;
+    position: relative;
+}
+
+.instructions li::before {
+    content: counter(step-counter) ".";
+    position: absolute;
+    left: 0;
+    color: #854632;
+    font-weight: bold;
+}
+
+.nutrition {
+    margin-top: 32px;
+}
+
+.nutrition-intro {
+    color: #5f6368;
+    margin-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 12px 0;
+    color: #5f6368;
+}
+
+td:last-child {
+    text-align: right;
+    color: #854632;
+    font-weight: 500;
+}
+
+.prep-time strong {
+    color: #1b1c1e;
+}
